@@ -1,38 +1,145 @@
+:root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #2d2346, #a7565a);
+}
+
 .App {
+  position: absolute;
+  display: flex;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 2;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/** Left Half Styles  */
+
+.LeftHalf {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #371c3b, #612c44);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MartianImage {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MartianTitle {
+  position: absolute;
+  margin: 0;
+  left: 52%;
+  bottom: 5%;
+  transform: translate(-50%);
+  text-transform: uppercase;
+  font-size: 3vmin;
+  letter-spacing: 0.6rem;
+  text-align: center;
+  color: #c25151;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/** User Data Half Styles  */
+
+.DataComponent {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #95434d, #cc5757);
+}
+
+.TextFieldsContainer {
+  position: relative;
+  margin-top: 20%;
+}
+
+.TextField {
+  position: relative;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  background-color: transparent;
   color: white;
+  width: 50%;
+  left: 50%;
+  height: 20%;
+  padding: 10px;
+  font-size: 2vmin;
+  margin-top: 1.6vmin;
+  transform: translate(-50%);
 }
 
-.App-link {
-  color: #61dafb;
+input::placeholder {
+  color: rgb(229, 229, 229);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus {
+  outline: none;
+}
+
+.ButtonSection {
+  position: relative;
+  margin-top: 3vmin;
+  justify-content: center;
+  display: flex;
+  gap: 5vmin;
+}
+
+.Button {
+  position: relative;
+  top: 10%;
+  justify-content: center;
+}
+
+.Button > button {
+  color: white;
+  border-color: white;
+  background-color: transparent;
+  padding: 1.5vmin;
+  font-size: 2vmin;
+  font-weight: lighter;
+  border-width: 1px;
+  user-select: none;
+}
+
+.ForgotPassword {
+  position: absolute;
+  color: white;
+  border-color: white;
+  background-color: transparent;
+  font-size: 1.6vmin;
+  bottom: 10%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%);
+  border: 0;
+}
+
+.MartianLittleImage {
+  position: absolute;
+  --size: 15%;
+  width: var(--size);
+  height: var(--size);
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -8%;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 3vmin;
+  letter-spacing: 0.6rem;
+  text-align: center;
 }
